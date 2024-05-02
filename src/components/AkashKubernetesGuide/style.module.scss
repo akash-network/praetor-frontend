@@ -1,0 +1,43 @@
+@import '../../mixins.scss';
+
+.background_white {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.background_red {
+  // background-color: $red_theme;
+  min-height: 400px;
+  min-width: 100%;
+  // text-align: center;
+  border-radius: 10px;
+  // color: $white_theme;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h1 {
+  font-size: 60px;
+  font-weight: 600;
+  // color: $white_theme;
+  text-align: center;
+}
+
+a {
+  font-size: 14px;
+  color: $red_theme;
+}
+
+a:hover {
+  color: $white_theme;
+}
+.kubeready_button {
+  width: 150px;
+  height: 50px !important;
+  color: $red_theme !important;
+}

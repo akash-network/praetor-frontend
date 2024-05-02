@@ -1,0 +1,74 @@
+@import '../../mixins.scss';
+
+.background {
+  background-color: $red_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_title {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.img_content {
+  @extend .content;
+}
+
+.h1 {
+  font-size: 60px;
+  color: $white_theme;
+}
+
+@media only screen and (max-width: 575px) {
+  .img_content {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .congrats_logo {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .congrats_logo {
+    height: 150px;
+  }
+}
+
+.next_button {
+  min-width: 150px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  height: 50px !important;
+  color: $red_theme !important;
+  background-color: $white_theme !important;
+}
+
+.domain {
+  font-size: 16px;
+  color: $white_theme;
+  div {
+    font-size: 12px;
+  }
+}
+
+.white_background {
+  background: $white_theme;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 20px;
+}

@@ -1,0 +1,37 @@
+@import '../../mixins.scss';
+
+.badge_text {
+  text-transform: 'capitalize' !important;
+  font-weight: bold;
+}
+.attributes_font {
+  font-size: 18px;
+}
+.resources_row {
+  align-items: baseline;
+}
+.tag {
+  font-size: 12px !important;
+  padding: 4px 16px 4px !important;
+  border-radius: 24px !important;
+}
+.card_title {
+  font-size: 22px;
+}
+.tag_div {
+  justify-content: end;
+}
+.gseq_oseq_row {
+  margin-top: -50px !important;
+}
+.code {
+  color: #fff !important;
+}
+.flex_container {
+  height: 70vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

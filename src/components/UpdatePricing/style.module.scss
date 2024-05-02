@@ -1,0 +1,72 @@
+@import '../../mixins.scss';
+
+.h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: $red_theme;
+}
+
+.connect_button {
+  min-width: 150px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: $red_theme !important;
+}
+
+.input_number {
+  height: 40px;
+  min-width: 317px;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-radius: 9px;
+  border-color: $light_red_theme !important;
+  input {
+    border-radius: 6px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+
+.label {
+  color: $black_theme;
+  font-weight: 400;
+  font-family: $header-font;
+  font-size: 16px;
+}
+
+a:hover {
+  color: $black_theme;
+}
+
+.advance_settings {
+  height: 40px;
+  width: 317px !important;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-radius: 9px;
+  border-color: $light_red_theme !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .input_number {
+    height: 40px;
+    min-width: 217px;
+    background-color: $light_red_theme !important;
+    color: $white_theme !important;
+    border-radius: 9px;
+    border-color: $light_red_theme !important;
+    input {
+      border-radius: 6px !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    &::-webkit-input-placeholder {
+      color: $white_theme !important;
+    }
+  }
+}

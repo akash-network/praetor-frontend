@@ -1,0 +1,10 @@
+@import '../../mixins.scss';
+
+.active_process {
+  background-color: $white_theme;
+}
+.nodes_row {
+  height: 40px;
+  font-weight: 100;
+  align-items: center;
+}

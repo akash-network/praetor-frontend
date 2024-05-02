@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+// $text: #000;
+// $success: green;
+
+$red_theme: #ff7043;
+$light_red_theme: #ff8a65;
+$dark_red_theme: #d84315;
+
+$white_theme: #fff;
+$foreground_white_color: #fafafa;
+
+$black_theme: #212121;
+
+// Colors
+$white: #fff;
+$black: #212121;
+$blue: var(--vb-color-primary);
+$blue-light: #ff8a65;
+$blue-dark: #ff7043;
+$gray-1: #f5f5f5;
+$gray-2: #eee;
+$gray-3: #e0e0e0;
+$gray-4: #bdbdbd;
+$gray-5: #a1a1c2;
+$gray-6: #5f6294;
+$yellow: #ff0;
+$orange: #faad15;
+$red: #f5222e;
+$pink: #fd3995;
+$purple: #333;
+$green: #41b883;
+
+$text: $black;
+$border: $gray-2;
+
+// Accent colors
+$default: $gray-4;
+$primary: $blue;
+$secondary: $gray-5;
+$success: $green;
+$info: $blue-light;
+$warning: $orange;
+$danger: $red;
+$light: $gray-1;
+$dark: $black;
+
+// dark theme
+$dark-gray-1: #aeaee0;
+$dark-gray-2: #7575a3;
+$dark-gray-3: #4f4f7a;
+$dark-gray-4: #232135;
+$dark-gray-5: #141322;
+$dark-gray-6: #0c0c1b;
+
+// Font
+$base-font: 'Roboto', sans-serif;
+$base-font-size: 15 !default;
+
+$header-font: 'Raleway', sans-serif;
+
+// Shadows
+$shadow: 0 0 40px -10px rgba($black, 0.2);
+$shadow-2: 0 4px 38px 0 rgba($black, 0.11), 0 0 21px 0 rgba($black, 0.05);
+$shadow-3: 0 0 100px -30px rgba(57, 55, 73, 0.3);
+$shadow-4: 0 4px 10px 0 rgba($black, 0.03), 0 0 10px 0 rgba($black, 0.02);
+$shadow-5: 0 0 40px -10px rgba($black, 0.4);
+$shadow-ant: 0 10px 35px -5px rgba(0, 0, 0, 0.15);
+
+// Convert value of rem() sass mixin function
+@function rem($px, $base: $base-font-size) {
+  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
+  // @return #{$px}px; // to PX's
+}
+
+// Transitions
+@mixin transition-bg() {
+  transition: background 0.2s ease-in-out;
+}
+@mixin transition-color() {
+  transition: color 0.2s ease-in-out;
+}
+@mixin transition-fast() {
+  transition: all 0.05s ease-in-out;
+}
+@mixin transition-middle() {
+  transition: all 0.1s ease-in-out;
+}
+@mixin transition-slow() {
+  transition: all 0.2s ease-in-out;
+}
+
+// Responsive utils
+$xxl-min-width: 1600px;
+$xxl-max-width: 1599px;
+$xl-min-width: 1200px;
+$xl-max-width: 1199px;
+$lg-min-width: 992px;
+$lg-max-width: 991px;
+$md-min-width: 768px;
+$md-max-width: 767px;
+$sm-min-width: 576px;
+$sm-max-width: 575px;

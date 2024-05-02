@@ -1,0 +1,77 @@
+@import 'mixins.scss';
+
+$dark-gray-5: #161537;
+
+[data-vb-version='air'] {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  input {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .vb__utils {
+    &__heading {
+      margin-bottom: rem(30);
+      font-size: rem(19);
+      padding-left: 0;
+      padding-bottom: rem(15);
+      border-bottom: 1px solid $gray-2;
+      position: relative;
+
+      > strong {
+        font-weight: normal;
+        text-transform: none;
+      }
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: auto;
+        left: 0;
+        bottom: -4px;
+        height: 7px;
+        width: 35px;
+        border-radius: 7px;
+        background: var(--vb-color-primary);
+      }
+
+      @at-root {
+        [data-vb-version='air'] {
+          .card-header {
+            .vb__utils__heading {
+              margin-bottom: rem(-21);
+            }
+          }
+          .card-placeholder {
+            .card-header {
+              .vb__utils__heading {
+                margin-bottom: rem(15);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__fixedBtn {
+      right: 0;
+      min-width: rem(60);
+      border-radius: 5px 0 0 5px;
+
+      &__long {
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &[data-vb-theme='dark'] {
+    .vb__utils {
+      &__heading {
+        border-color: $dark-gray-4;
+      }
+    }
+  }
+}

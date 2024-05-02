@@ -1,0 +1,52 @@
+@import '../../mixins.scss';
+
+.background {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.h1 {
+  font-size: 72px;
+  color: $red_theme;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 56px;
+  color: $red_theme;
+}
+
+.yes_button {
+  width: 120px;
+  height: 60px !important;
+  border-radius: 20px;
+  color: $white_theme !important;
+  background: $red_theme !important;
+  border-color: $red_theme !important;
+}
+
+.multiple_server_button {
+  height: 60px !important;
+  border-radius: 20px;
+  color: $red_theme !important;
+  background: $white_theme !important;
+  border-color: $red_theme !important;
+  width: 150px;
+}
+
+.kubeReadyLogo {
+  margin-top: -100px;
+}
+.h5 {
+  border: none !important;
+  color: $red_theme !important;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .kubeReadyLogo {
+    margin-top: 0;
+  }
+}

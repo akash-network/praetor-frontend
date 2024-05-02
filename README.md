@@ -1,6 +1,6 @@
 # Praetor-Frontend
 
-Praetor-Fronend is UI of the Praetor Application and accessible via akash.praetorapp.com
+Praetor-frontend is the UI of the Praetor Application and is accessible via akash.praetorapp.com
 
 ## Installation
 

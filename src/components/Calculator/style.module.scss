@@ -1,0 +1,35 @@
+@import '../../mixins.scss';
+
+.background {
+  background-color: $white_theme;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  a {
+    color: $light_red_theme;
+
+    &:hover {
+      color: $dark_red_theme;
+    }
+  }
+}
+
+.h1 {
+  font-weight: 600;
+}
+
+.attributes_font {
+  font-size: 30px;
+}
+
+.inputNumber {
+  border-radius: 0;
+
+  border-color: $light_red_theme !important;
+
+  input {
+    border-radius: 6px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}

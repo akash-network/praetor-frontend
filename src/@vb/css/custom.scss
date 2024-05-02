@@ -1,0 +1,194 @@
+// this is shared mixins file for all components from the app,
+// there you can easily add your own variables / imports or redefine
+// existing without touching default packages for future updates
+
+@import 'mixins.scss';
+
+.red_background {
+  .ant-form-item-explain-error {
+    color: $white_theme !important;
+  }
+}
+
+.white_background {
+  .ant-form-item-explain-error {
+    color: $red_theme !important;
+  }
+}
+
+.red_background_select {
+  .ant-select-selector {
+    height: 50px !important;
+    background-color: $light_red_theme !important;
+    border: 1px solid $light_red_theme !important;
+    line-height: 46px !important;
+  }
+  .ant-select-selection-search-input {
+    height: 50px !important;
+    line-height: 46px !important;
+  }
+  .ant-select-selection-placeholder {
+    line-height: 45px !important;
+    color: $white_theme !important;
+  }
+  .ant-select-selection-item {
+    line-height: 45px !important;
+  }
+}
+.custom_radio {
+  .ant-radio-button-wrapper {
+    color: #fff !important;
+    background: #ff936b !important;
+    border: 0 !important;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    color: #ff936b !important;
+    background: #fff !important;
+    border: 0 !important;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: transparent;
+    display: none;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+    box-shadow: none;
+  }
+}
+.custom_radio_1 {
+  .ant-radio-button-wrapper {
+    color: #ff936b !important;
+    background: #fff !important;
+    border: 1px solid #ff936b !important;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    color: #fff !important;
+    background: #ff936b !important;
+    border: 1px solid #ff936b !important;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: transparent;
+    display: none;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+    box-shadow: none;
+  }
+}
+
+.initial__loading {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+.initial__loading svg {
+  width: 100px;
+  height: 100px;
+}
+
+.initial__loading svg path {
+  stroke: #ff7043;
+  fill: #ff7043;
+  stroke-width: 1px;
+  animation: logoAnimate 1s ease-in-out infinite;
+}
+
+.initial__loading svg path:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.initial__loading svg path:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes logoAnimate {
+  0% {
+    stroke: #ff7043;
+    fill: #ff7043;
+  }
+
+  50% {
+    stroke: #ffccbc;
+    fill: #ffccbc;
+  }
+
+  100% {
+    stroke: #ff7043;
+    fill: #ff7043;
+  }
+}
+.ant-spin-nested-loading > div > .ant-spin {
+  max-height: none !important;
+}
+
+.margin-adjust {
+  margin-bottom: 120px;
+}
+
+.kube-guide {
+  h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  pre {
+    background: $gray-2;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 20px;
+  }
+}
+
+.small-text {
+  font-size: 12px;
+}
+.swal-cncl-button {
+  border: 1px solid black !important;
+  color: black !important;
+  font-weight: normal !important;
+}
+.custom-checkbox {
+  .ant-checkbox-inner {
+    border-radius: 3px !important;
+    background-color: #ff936b !important;
+    border: 0 !important;
+    height: 20px !important;
+    width: 20px !important;
+  }
+  .ant-checkbox-checked::after {
+    border: 0 !important;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    transform: rotate(45deg) scale(1.6) translate(-30%, -50%) !important;
+  }
+  .ant-checkbox-wrapper {
+    align-items: flex-start !important;
+  }
+}
+
+.switchButton {
+  .ant-switch-checked {
+    background: #ff8a65 !important;
+  }
+}
+.blank-button {
+  .ant-btn-text:hover {
+    background: none !important;
+  }
+}
+.custom-drawer {
+  .ant-drawer-header {
+    align-self: flex-end !important;
+  }
+  .ant-drawer-content-wrapper {
+    width: 600px !important;
+  }
+}

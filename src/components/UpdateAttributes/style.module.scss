@@ -1,0 +1,40 @@
+@import '../../mixins.scss';
+
+.h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: $red_theme;
+}
+.inputAttributeForm {
+  height: 50px;
+  max-width: 100%;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  width: 300px !important;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+.label {
+  color: $black_theme;
+  font-weight: 400;
+  font-family: $header-font;
+  font-size: 16px;
+}
+.add_button {
+  height: 50px !important;
+  border-radius: 20px;
+  color: $red_theme !important;
+  background: white !important;
+  border-color: $red_theme !important;
+  width: 120px;
+}
+.yes_button {
+  width: 120px;
+  height: 50px !important;
+  border-radius: 20px;
+  color: $white_theme !important;
+  background: $red_theme !important;
+  border-color: $red_theme !important;
+}

@@ -1,0 +1,87 @@
+@import '../../mixins.scss';
+
+.background_white {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  font-size: 64px;
+  font-weight: 600;
+}
+.content_question {
+  font-size: 32px;
+  font-weight: 600;
+}
+.highlight_text {
+  color: $red_theme;
+}
+.yes_button {
+  width: 120px;
+  height: 60px !important;
+  border-radius: 20px;
+  color: $white_theme !important;
+  background: $red_theme !important;
+  border-color: $red_theme !important;
+}
+
+.add_button {
+  height: 60px !important;
+  border-radius: 20px;
+  color: $red_theme !important;
+  background: white !important;
+  border-color: $red_theme !important;
+  width: 120px;
+}
+.no_button {
+  height: 60px !important;
+  border-radius: 20px;
+  color: white !important;
+  background: #757575 !important;
+  border-color: #757575 !important;
+  width: 120px;
+}
+.form_image {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  bottom: 140px;
+  left: 50px;
+}
+
+.form_content {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+
+.form_heading {
+  font-size: 44px;
+  font-weight: 600;
+}
+.upload_button {
+  color: $white_theme !important;
+  background-color: $light_red_theme !important;
+  height: 45px !important;
+}
+.label {
+  font-weight: 700;
+  font-family: $header-font;
+  font-size: 16px;
+}
+.input {
+  height: 50px;
+  max-width: 100%;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../../mixins.scss';
+
+.background_white {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: $black_theme;
+}
+
+.connect_button {
+  width: 150px;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: $red_theme !important;
+}
+
+.input {
+  height: 50px;
+  max-width: 400px;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  width: 400px !important;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+
+.lable {
+  color: $black_theme;
+  font-weight: 700;
+  font-family: $header-font;
+  font-size: 16px;
+}
+.mode_select {
+  margin-top: 20px;
+  text-align: center;
+}
+.praetor_title {
+  font-weight: 600;
+  color: $red_theme;
+}
+.manual_title {
+  font-weight: 600;
+  color: #757575;
+}
+.manual_next_button {
+  width: 100px;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: #757575 !important;
+}
+.auto_next_button {
+  width: 100px;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: $red_theme !important;
+}
+.switch_to_button {
+  width: 100px;
+  height: 50px !important;
+  color: $black_theme !important;
+}
+
+.steps {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 575px) {
+  .wallet_import_logo {
+    display: none;
+  }
+  .h1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wallet_import_logo {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wallet_import_logo {
+    height: 150px;
+  }
+}

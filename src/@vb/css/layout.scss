@@ -1,0 +1,88 @@
+@import 'mixins.scss';
+
+.vb {
+  &__layout {
+    min-height: 100vh !important;
+
+    &__content {
+      padding: rem(30);
+      margin: 0 auto;
+      width: 100%;
+
+      @media (max-width: $sm-max-width) {
+        padding: rem(30) rem(16);
+      }
+    }
+
+    &__header {
+      background: $white !important;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    /* SETTINGS */
+    &__grayBackground {
+      background: $gray-1 !important;
+    }
+
+    &__contentMaxWidth {
+      .vb__layout__content {
+        max-width: rem(1280);
+        margin: 0 auto;
+      }
+    }
+
+    &__appMaxWidth {
+      max-width: rem(1280);
+      margin: 0 auto;
+    }
+
+    &__squaredBorders {
+      .card {
+        border-radius: 0 !important;
+      }
+    }
+
+    &__cardsShadow {
+      .card {
+        box-shadow: $shadow-4;
+        .card {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &__borderless {
+      .card {
+        border-color: transparent !important;
+      }
+    }
+
+    &__fixedHeader {
+      position: sticky;
+      top: 0;
+      z-index: 998;
+    }
+
+    &__headerGray {
+      background: $gray-1 !important;
+    }
+
+    &__separatedHeader {
+      margin: rem(20) rem(20) 0;
+      background: transparent !important;
+      border-radius: 8px;
+    }
+  }
+}
+
+// dark theme
+[data-vb-theme='dark'] {
+  .vb {
+    &__layout {
+      &__grayBackground,
+      &__headerGray {
+        background: transparent !important;
+      }
+    }
+  }
+}

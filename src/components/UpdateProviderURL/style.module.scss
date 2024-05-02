@@ -1,0 +1,38 @@
+@import '../../mixins.scss';
+
+.input {
+  height: 50px;
+  min-width: 300px !important;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+
+.label {
+  color: $black_theme;
+  font-weight: 400;
+  font-family: $header-font;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: $red_theme;
+}
+
+.connect_button {
+  min-width: 150px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: $red_theme !important;
+}

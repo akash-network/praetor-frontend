@@ -1,0 +1,68 @@
+@import 'mixins.scss';
+
+.tooltip {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  @include transition-middle();
+}
+
+:global(.tablet) {
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(25);
+  height: rem(8);
+  border-radius: 4px;
+  background-color: $gray-5;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.circleIconActive {
+  padding-right: 10px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    vertical-align: -10%;
+    border: 3px solid #ff8a65;
+  }
+}
+.circleIconPending {
+  padding-right: 10px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    vertical-align: -10%;
+    border: 3px solid #ffc107;
+  }
+}
+.circleIconAvalilable {
+  padding-right: 10px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    vertical-align: -10%;
+    border: 3px solid #d7ccc8;
+  }
+}

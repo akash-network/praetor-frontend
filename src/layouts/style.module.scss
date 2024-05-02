@@ -1,0 +1,44 @@
+@import '../mixins.scss';
+
+.content {
+  min-height: calc(100vh - 120px);
+}
+
+.footer_red {
+  color: $white_theme;
+  margin-top: -120px;
+  .button {
+    background-color: $white_theme;
+  }
+}
+
+.footer_white {
+  color: $black_theme;
+  margin-top: -120px;
+  .button {
+    background-color: $red_theme;
+    color: $black_theme;
+  }
+}
+.footer_font {
+  font-size: 9px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer_red {
+    color: $white_theme;
+    margin-top: -130px;
+    .button {
+      background-color: $white_theme;
+      color: $red_theme;
+    }
+  }
+  .footer_white {
+    color: $black_theme;
+    margin-top: -130px;
+    .button {
+      background-color: $red_theme;
+      color: $black_theme;
+    }
+  }
+}

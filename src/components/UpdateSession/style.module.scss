@@ -1,0 +1,89 @@
+@import '../../mixins.scss';
+
+.h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: $red_theme;
+}
+
+.connect_button {
+  width: 180px;
+  height: 50px !important;
+  color: $white_theme !important;
+  background-color: $red_theme !important;
+}
+
+.input {
+  height: 50px;
+  max-width: 100%;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+
+.label {
+  font-weight: 700;
+  font-family: $header-font;
+  font-size: 16px;
+}
+
+.upload_button {
+  color: $white_theme !important;
+  background-color: $light_red_theme !important;
+  height: 45px !important;
+}
+
+.ant_form_item_optional {
+  display: none !important;
+}
+
+.custom_radio_1 {
+  .ant-radio-button-wrapper {
+    color: #ff936b !important;
+    background: #fff !important;
+    border: 0 !important;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    color: #fff !important;
+    background: #ff936b !important;
+    border: 0 !important;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: transparent;
+    display: none;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 1192px) {
+  .input {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .input {
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .input {
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.tooltip {
+  .ant-form-item-tooltip {
+    color: #fff;
+  }
+}

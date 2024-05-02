@@ -1,0 +1,74 @@
+@import '../../mixins.scss';
+
+.background {
+  background-color: $white_theme;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  a {
+    color: $light_red_theme;
+
+    &:hover {
+      color: $dark_red_theme;
+    }
+  }
+}
+
+.h1 {
+  font-weight: 600;
+}
+
+.cardTitle {
+  font-size: 30px;
+}
+
+.attributes_font {
+  font-size: 18px;
+}
+
+.inputNumber {
+  border-radius: 0;
+
+  border-color: $light_red_theme !important;
+
+  input {
+    border-radius: 6px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+.attributeCard {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.searchInput {
+  input {
+    background-color: $white_theme !important;
+    color: $red_theme !important;
+  }
+}
+
+.copyToClipboard {
+  .copyToClipboardSpan {
+    span {
+      margin-left: 10px;
+      opacity: 0;
+    }
+  }
+  &:hover {
+    .copyToClipboardSpan {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+}
+.praetorShortLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,104 @@
+@import '../../mixins.scss';
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.background_red {
+  padding-left: 100px;
+  background-color: $red_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.background_white {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: $white_theme;
+}
+
+.connect_button {
+  width: 180px;
+  height: 50px !important;
+  color: $red_theme !important;
+}
+
+.subtext {
+  color: $white_theme;
+  font-size: 16px;
+}
+
+.input {
+  height: 50px;
+  max-width: 100%;
+  background-color: $light_red_theme !important;
+  color: $white_theme !important;
+  border-color: $red_theme;
+  &::-webkit-input-placeholder {
+    color: $white_theme !important;
+  }
+}
+
+.label {
+  color: $white_theme;
+  font-weight: 700;
+  font-family: $header-font;
+  font-size: 16px;
+}
+
+.upload_button {
+  color: $white_theme !important;
+  background-color: $light_red_theme !important;
+  height: 45px !important;
+}
+
+.ant_form_item_optional {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1192px) {
+  .background_red {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .input {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .input {
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .background_red {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .input {
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.tooltip {
+  .ant-form-item-tooltip {
+    color: #fff;
+  }
+}
