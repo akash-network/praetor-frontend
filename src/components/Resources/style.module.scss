@@ -1,0 +1,35 @@
+@import '../../mixins.scss';
+.icon_size {
+  font-size: 2em;
+  color: $black_theme;
+}
+.font_style {
+  font-size: 22px;
+  color: #141322;
+}
+.yes_button {
+  width: 215px;
+  height: 50px !important;
+  border-radius: 20px;
+  color: $white_theme !important;
+  background: $red_theme !important;
+  border-color: $red_theme !important;
+}
+
+.attributes_font {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.reinstall_button {
+  min-width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px !important;
+  font-size: 16px !important;
+  background-color: $red_theme !important;
+  color: $white_theme !important;
+}

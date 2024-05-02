@@ -1,0 +1,34 @@
+@import 'mixins.scss';
+
+[data-vb-version='clean'] {
+  body {
+    font-family: 'Mukta', sans-serif;
+  }
+
+  input {
+    font-family: 'Mukta', sans-serif;
+  }
+
+  .vb__utils {
+    &__heading {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+
+      > strong {
+        text-transform: uppercase;
+      }
+
+      @at-root {
+        .card-placeholder {
+          .card-header {
+            padding: 0;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Use this folder for a new or copied (modified) components or widgets from the @vb folder. We recommend that you do not touch the @vb folder for easy future updates.

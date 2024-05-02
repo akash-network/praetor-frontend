@@ -1,0 +1,48 @@
+@import '../../mixins.scss';
+
+.container {
+  margin-left: 0;
+  min-width: 80%;
+}
+
+.background_white {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background_red {
+  min-height: 70vh;
+  background-color: $red_theme;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.img_responsive {
+  width: 50%;
+  height: auto;
+}
+.h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: $white_theme;
+  text-align: center;
+}
+.subText {
+  font-size: 18px;
+  font-weight: 100;
+  color: $white_theme;
+  text-align: center;
+}
+.imgAndProgressAlign {
+  position: relative;
+}
+.progressBar {
+  position: absolute;
+  left: 140px;
+  top: 45px;
+  width: 200px;
+  height: 200px;
+}

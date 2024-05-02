@@ -1,0 +1,45 @@
+@import '../../mixins.scss';
+
+.background {
+  background-color: $white_theme;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img_content {
+  @extend .content;
+}
+
+.h1 {
+  font-size: 60px;
+  color: $white_theme;
+}
+
+@media only screen and (max-width: 1199px) {
+  .img_responsive {
+    min-width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .img_content {
+    display: none;
+  }
+}
+
+.next_button {
+  min-width: 150px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  height: 50px !important;
+  color: $red_theme !important;
+  background-color: $red_theme !important;
+}
