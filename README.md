@@ -4,6 +4,8 @@ Praetor-frontend is the UI of the Praetor Application and is accessible via akas
 
 ## Installation
 
+Support Node version - v18.14.0
+
 To install dependencies, you can use Yarn. Run the following command in the root directory of your project:
 
 ```bash
