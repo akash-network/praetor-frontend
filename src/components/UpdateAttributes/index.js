@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { Form, Button, Input, Divider, Drawer, notification } from 'antd'
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
-import { signin, updateProvider } from 'services/akash'
 import style from './style.module.scss'
 
 const generticErrorMessage = 'Error Occurred, Please try again!'
@@ -14,7 +13,7 @@ const notifyError = (error = { message: generticErrorMessage }) => {
   })
 }
 
-const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, chain, resources }) => {
+const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, resources }) => {
   const [size, setSize] = useState()
   const [form] = Form.useForm()
   const [width, setWidth] = useState(window.innerWidth)
@@ -64,39 +63,14 @@ const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, chain, resource
   }
   const onFinish = async (values) => {
     try {
-      const existingAttributes = resources.providerDetails
-      existingAttributes.provider_attributes.attributes = values.attributes
       setLoading(true)
-
-      const selectedChain = JSON.parse(chain.selectedChain)
-
-      const { signingClient, address } = await signin(selectedChain)
-      const request = {
-        hostUri: resources.providerDetails.provider_attributes.host_uri,
-        signingClient,
-        attributes: values.attributes,
-        address,
-      }
-      const signedMessage = await updateProvider(request)
-      if (signedMessage) {
-        dispatch({
-          type: 'resources/SET_STATE',
-          payload: {
-            providerDetails: existingAttributes,
-          },
-        })
-        dispatch({
-          type: 'resources/UPDATE_ATTRIBUTES',
-          payload: {
-            attributes: values.attributes,
-          },
-        })
-        setLoading(false)
-        notification.success({
-          message: 'Success! Provider Attributes updated!',
-        })
-        closeDrawer()
-      }
+      dispatch({
+        type: 'resources/UPDATE_ATTRIBUTES',
+        payload: {
+          attributes: values.attributes,
+        },
+      })
+      setLoading(false)
     } catch (error) {
       notifyError(error)
       setLoading(false)
@@ -194,7 +168,7 @@ const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, chain, resource
                           type="primary"
                           htmlType="submit"
                           className={`ml-3 ${style.yes_button}`}
-                          loading={loading}
+                          loading={loading || resources.processLoading}
                         >
                           Update
                         </Button>
