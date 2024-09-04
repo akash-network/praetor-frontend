@@ -63,10 +63,7 @@ const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, resources }) =>
   }
   const onFinish = async (values) => {
     try {
-      const existingAttributes = resources.providerDetails
-      existingAttributes.provider_attributes.attributes = values.attributes
       setLoading(true)
-
       dispatch({
         type: 'resources/UPDATE_ATTRIBUTES',
         payload: {
