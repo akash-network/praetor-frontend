@@ -580,6 +580,7 @@ export function* UPDATE_ATTRIBUTES({ payload }) {
   const { response } = yield call(updateProviderEvent, request)
 
   if (response && response.status === 'success') {
+    const { data } = response
     yield put({
       type: 'resources/SET_STATE',
       payload: {
@@ -600,6 +601,7 @@ export function* UPDATE_ATTRIBUTES({ payload }) {
     })
 
     yield call(GET_PROVIDER_VERSION)
+    notification.success({ message: data })
   } else if (response && response.status === 'error') {
     const { error } = response
     if (error.error_code) {

@@ -168,7 +168,7 @@ const UpdateAttributes = ({ showDrawer, onCloseDrawer, dispatch, resources }) =>
                           type="primary"
                           htmlType="submit"
                           className={`ml-3 ${style.yes_button}`}
-                          loading={loading}
+                          loading={loading || resources.processLoading}
                         >
                           Update
                         </Button>
