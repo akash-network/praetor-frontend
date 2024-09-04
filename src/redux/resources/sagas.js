@@ -589,6 +589,16 @@ export function* UPDATE_ATTRIBUTES({ payload }) {
         processUpdated: true,
       },
     })
+
+    const providerData = resources.providerDetails
+    providerData.provider_attributes.attributes = payload.attributes
+    yield put({
+      type: 'resources/SET_STATE',
+      payload: {
+        providerDetails: providerData,
+      },
+    })
+
     yield call(GET_PROVIDER_VERSION)
   } else if (response && response.status === 'error') {
     const { error } = response
